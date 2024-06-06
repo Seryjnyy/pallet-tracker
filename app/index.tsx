@@ -2,7 +2,8 @@ import * as SQLite from "expo-sqlite";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { useState } from "react";
-import { Button, Text, View } from "react-native";
+import { Text, View } from "react-native";
+import { Button, Select } from "tamagui";
 
 const CountResult = ({ amounts }: { amounts: Map<number, number> }) => {
     return <ThemedView></ThemedView>;
@@ -92,6 +93,24 @@ export default function Index() {
             }}
         >
             <ThemedText>Edit app/index.tsx to edit this screen.</ThemedText>
+            <Button>hello</Button>
+            <Select defaultValue="">
+                <Select.Trigger>
+                    <Select.Value placeholder="Search..." />
+                </Select.Trigger>
+                <Select.Content>
+                    <Select.ScrollUpButton />
+                    <Select.Viewport>
+                        <Select.Group>
+                            <Select.Label />
+                            <Select.Item index={0} value="hello">
+                                <Select.ItemText>{"item.name"}</Select.ItemText>
+                            </Select.Item>
+                        </Select.Group>
+                    </Select.Viewport>
+                    <Select.ScrollDownButton />
+                </Select.Content>
+            </Select>
             {/* <CountResult amounts={count} />
             <CountModifier amounts={count} /> */}
             {/* <Button title="set up" onPress={setUp}></Button> */}
