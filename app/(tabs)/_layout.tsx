@@ -1,9 +1,11 @@
-import { Tabs } from "expo-router";
+import { Link, Tabs } from "expo-router";
 import React from "react";
 
 import { TabBarIcon } from "@/components/navigation/TabBarIcon";
 import { Colors } from "@/constants/Colors";
 import { useColorScheme } from "@/hooks/useColorScheme";
+import { Button } from "tamagui";
+import { ThemedText } from "@/components/ThemedText";
 
 export default function TabLayout() {
     const colorScheme = useColorScheme();
@@ -12,7 +14,7 @@ export default function TabLayout() {
         <Tabs
             screenOptions={{
                 tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
-                headerShown: false,
+                headerShown: true,
             }}
         >
             <Tabs.Screen
@@ -28,13 +30,32 @@ export default function TabLayout() {
                 }}
             />
             <Tabs.Screen
-                name="something"
+                name="session/[id]"
                 options={{
-                    title: "something",
+                    title: "Session",
+                    tabBarIcon: ({ color, focused }) => (
+                        <TabBarIcon
+                            name={focused ? "airplane" : "airplane-outline"}
+                            color={color}
+                        />
+                    ),
+                    headerLeft: () => (
+                        <Link href="/" asChild>
+                            <Button variant="outlined">
+                                <ThemedText>back</ThemedText>
+                            </Button>
+                        </Link>
+                    ),
+                }}
+            />
+            <Tabs.Screen
+                name="(config)"
+                options={{
+                    title: "config",
                     headerShown: false,
                     tabBarIcon: ({ color, focused }) => (
                         <TabBarIcon
-                            name={focused ? "home" : "home-outline"}
+                            name={focused ? "cog" : "cog-outline"}
                             color={color}
                         />
                     ),

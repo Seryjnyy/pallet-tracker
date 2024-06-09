@@ -12,6 +12,8 @@ const config = getDefaultConfig(__dirname, {
 
 const { withTamagui } = require("@tamagui/metro-plugin");
 
+config.resolver.sourceExts.push("sql");
+
 module.exports = withTamagui(config, {
     components: ["tamagui"],
 

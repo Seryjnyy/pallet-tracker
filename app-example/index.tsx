@@ -92,7 +92,7 @@ export default function Index() {
                 alignItems: "center",
             }}
         >
-            <ThemedText>Edit app/index.tsx to edit this screen.</ThemedText>
+            <ThemedText>kurdfswsfdasfsaa</ThemedText>
             <Button>hello</Button>
             <Select defaultValue="">
                 <Select.Trigger>

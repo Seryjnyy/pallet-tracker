@@ -29000,7 +29000,7 @@ var animationsCSS = createAnimations({
   tooltip: "ease-in 400ms"
 });
 
-// node_modules/@tamagui/font-inter/dist/esm/index.mjs
+// node_modules/@tamagui/config/node_modules/@tamagui/font-inter/dist/esm/index.mjs
 var import_core = require("@tamagui/core");
 var createInterFont = /* @__PURE__ */ __name((font = {}, {
   sizeLineHeight = /* @__PURE__ */ __name((size5) => size5 + 10, "sizeLineHeight"),

@@ -1,17 +1,13 @@
 {
-  "extends": "expo/tsconfig.base",
-  "compilerOptions": {
-    "strict": true,
-    "paths": {
-      "@/*": [
-        "./*"
-      ]
-    }
-  },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    ".expo/types/**/*.ts",
-    "expo-env.d.ts"
-  ]
+    "extends": "expo/tsconfig.base",
+    "compilerOptions": {
+        "strict": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "paths": {
+            "@/*": ["./*"]
+        },
+        "lib": ["ES6"]
+    },
+    "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts"]
 }
